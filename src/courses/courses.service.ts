@@ -26,6 +26,7 @@ export class CoursesService {
 
   create(createCourseDTO: any) {
     this.courses.push(createCourseDTO);
+    return createCourseDTO;
   }
 
   update(id: number, updateCourseDTO: any) {
@@ -40,7 +41,7 @@ export class CoursesService {
     }
   }
 
-  remove(id) {
+  remove(id: number) {
     const index = this.courses.findIndex((course) => course.id === id);
     if (index >= 0) {
       this.courses.splice(index, 1);
