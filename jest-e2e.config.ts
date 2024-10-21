@@ -7,4 +7,5 @@ export default {
   collectCoverageFrom: ['**/*.(t|j)s'],
   coverageDirectory: '../coverage',
   testEnvironment: 'node',
+  moduleDirectories: ['node_modules', 'src'],
 };
